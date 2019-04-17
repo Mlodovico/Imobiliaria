@@ -5,6 +5,13 @@ import java.util.*;
 
 public class Main {
 
+    @Override
+    public int hashCode() {
+
+
+        return super.hashCode();
+    }
+
     public static void main(String[] args) {
 
 

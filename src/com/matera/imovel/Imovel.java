@@ -32,23 +32,28 @@ public class Imovel {
     }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-    public int hashCode() {
+        Imovel imovel = (Imovel) o;
 
-        int I = getEnd().length() * 8;
+        if (preco != imovel.preco) return false;
+        return end != null ? end.equals(imovel.end) : imovel.end == null;
 
-        return I;
     }
 
-    public boolean equals(Object obj) {
+    @Override
+    public int hashCode() {
+        int result = end != null ? end.hashCode() : 0;
+        result = 31 * result + preco;
+        return result;
+    }
 
-        if ((obj instanceof Imovel) && ((Imovel) obj).getEnd().equals(this.getEnd())) {
-            return true;
-        }
-        else {
-            return false;
-        }
-
+    @Override
+    public String toString() {
+        return super.toString();
     }
 
 
@@ -56,7 +61,7 @@ public class Imovel {
     public String endNull(String end){
 
         if (end == null){
-            IllegalArgumentException erro = new IllegalArgumentException();
+            IllegalArgumentException erro = new IllegalArgumentException("");
             throw erro;
         }
         else {
@@ -67,9 +72,9 @@ public class Imovel {
     }
 
 
-    public int verificaPrecoNegatico( int preco){
+    public int verificaPrecoNegativo( int preco){
         if (preco<= 0){
-            IllegalArgumentException erro = new IllegalArgumentException();
+            IllegalArgumentException erro = new IllegalArgumentException("Argumento preco nao pode ser lido");
          throw erro;
         }
 
