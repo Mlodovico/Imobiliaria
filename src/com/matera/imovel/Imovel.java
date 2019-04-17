@@ -32,18 +32,6 @@ public class Imovel {
     }
 
 
-//    public int compareTo(Imovel imovel) {
-//        if (this.preco < imovel.preco) {
-//            return -1;
-//        }
-//        if (this.preco > imovel.preco) {
-//            return 1;
-//        }
-//        return 0;
-
-
-//    }
-
 
     public int hashCode() {
 
@@ -61,6 +49,35 @@ public class Imovel {
             return false;
         }
 
+    }
+
+
+
+    public String endNull(String end){
+
+        if (end == null){
+            IllegalArgumentException erro = new IllegalArgumentException();
+            throw erro;
+        }
+        else {
+            this.setEnd(end);
+
+              return getEnd();
+        }
+    }
+
+
+    public int verificaPrecoNegatico( int preco){
+        if (preco<= 0){
+            IllegalArgumentException erro = new IllegalArgumentException();
+         throw erro;
+        }
+
+        else {
+            this.setPreco(preco);
+
+              return getPreco();
+        }
     }
 }
 

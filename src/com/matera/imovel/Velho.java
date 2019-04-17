@@ -15,4 +15,6 @@ public class Velho extends Imovel {
         double valorizacaoImovel = preco - (preco * 0.20);
         return  (int) valorizacaoImovel;
     }
+
+
 }

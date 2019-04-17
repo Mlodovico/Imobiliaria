@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 
-public class VelhoTest {
+public class VelhoTest extends RuntimeException{
 
     @Test
     public void testDepreciacaoImovel(){

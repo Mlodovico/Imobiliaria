@@ -2,7 +2,7 @@ package com.matera.imovel;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class NovoTest {
+public class NovoTest extends RuntimeException{
 
     @Test
      public void testValorizacaoImovel(){
