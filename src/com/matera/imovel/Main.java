@@ -12,7 +12,7 @@ public class Main {
     Imovel I2 = new Imovel("27742424", 800);
     Imovel I3 = new Imovel("26642424", 1000);
     Imovel I4 = new Imovel("25542424", 500);
-    Imovel I5 = new Imovel("29942424", 200);
+    Imovel I5 = new Imovel("33342424", 200);
     Imovel I6 = new Imovel("28842424", 230);
 
     HashMap <Imovel, String> hash = new HashMap<Imovel, String>();
